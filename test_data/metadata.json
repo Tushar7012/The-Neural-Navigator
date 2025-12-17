@@ -1,0 +1,611 @@
+{
+  "dataset_info": {
+    "name": "Neural Navigator Dataset",
+    "version": "1.0",
+    "image_size": 128,
+    "num_samples": 100,
+    "num_path_points": 10
+  },
+  "samples": [
+    {
+      "id": 0,
+      "image_file": "000000.png",
+      "annotation_file": "000000.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 1,
+      "image_file": "000001.png",
+      "annotation_file": "000001.json",
+      "text": "Go to the Blue Triangle"
+    },
+    {
+      "id": 2,
+      "image_file": "000002.png",
+      "annotation_file": "000002.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 3,
+      "image_file": "000003.png",
+      "annotation_file": "000003.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 4,
+      "image_file": "000004.png",
+      "annotation_file": "000004.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 5,
+      "image_file": "000005.png",
+      "annotation_file": "000005.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 6,
+      "image_file": "000006.png",
+      "annotation_file": "000006.json",
+      "text": "Go to the Blue Triangle"
+    },
+    {
+      "id": 7,
+      "image_file": "000007.png",
+      "annotation_file": "000007.json",
+      "text": "Go to the Blue Triangle"
+    },
+    {
+      "id": 8,
+      "image_file": "000008.png",
+      "annotation_file": "000008.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 9,
+      "image_file": "000009.png",
+      "annotation_file": "000009.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 10,
+      "image_file": "000010.png",
+      "annotation_file": "000010.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 11,
+      "image_file": "000011.png",
+      "annotation_file": "000011.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 12,
+      "image_file": "000012.png",
+      "annotation_file": "000012.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 13,
+      "image_file": "000013.png",
+      "annotation_file": "000013.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 14,
+      "image_file": "000014.png",
+      "annotation_file": "000014.json",
+      "text": "Go to the Blue Triangle"
+    },
+    {
+      "id": 15,
+      "image_file": "000015.png",
+      "annotation_file": "000015.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 16,
+      "image_file": "000016.png",
+      "annotation_file": "000016.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 17,
+      "image_file": "000017.png",
+      "annotation_file": "000017.json",
+      "text": "Go to the Blue Triangle"
+    },
+    {
+      "id": 18,
+      "image_file": "000018.png",
+      "annotation_file": "000018.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 19,
+      "image_file": "000019.png",
+      "annotation_file": "000019.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 20,
+      "image_file": "000020.png",
+      "annotation_file": "000020.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 21,
+      "image_file": "000021.png",
+      "annotation_file": "000021.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 22,
+      "image_file": "000022.png",
+      "annotation_file": "000022.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 23,
+      "image_file": "000023.png",
+      "annotation_file": "000023.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 24,
+      "image_file": "000024.png",
+      "annotation_file": "000024.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 25,
+      "image_file": "000025.png",
+      "annotation_file": "000025.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 26,
+      "image_file": "000026.png",
+      "annotation_file": "000026.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 27,
+      "image_file": "000027.png",
+      "annotation_file": "000027.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 28,
+      "image_file": "000028.png",
+      "annotation_file": "000028.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 29,
+      "image_file": "000029.png",
+      "annotation_file": "000029.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 30,
+      "image_file": "000030.png",
+      "annotation_file": "000030.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 31,
+      "image_file": "000031.png",
+      "annotation_file": "000031.json",
+      "text": "Go to the Blue Triangle"
+    },
+    {
+      "id": 32,
+      "image_file": "000032.png",
+      "annotation_file": "000032.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 33,
+      "image_file": "000033.png",
+      "annotation_file": "000033.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 34,
+      "image_file": "000034.png",
+      "annotation_file": "000034.json",
+      "text": "Go to the Blue Triangle"
+    },
+    {
+      "id": 35,
+      "image_file": "000035.png",
+      "annotation_file": "000035.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 36,
+      "image_file": "000036.png",
+      "annotation_file": "000036.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 37,
+      "image_file": "000037.png",
+      "annotation_file": "000037.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 38,
+      "image_file": "000038.png",
+      "annotation_file": "000038.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 39,
+      "image_file": "000039.png",
+      "annotation_file": "000039.json",
+      "text": "Go to the Blue Triangle"
+    },
+    {
+      "id": 40,
+      "image_file": "000040.png",
+      "annotation_file": "000040.json",
+      "text": "Go to the Blue Triangle"
+    },
+    {
+      "id": 41,
+      "image_file": "000041.png",
+      "annotation_file": "000041.json",
+      "text": "Go to the Blue Triangle"
+    },
+    {
+      "id": 42,
+      "image_file": "000042.png",
+      "annotation_file": "000042.json",
+      "text": "Go to the Blue Triangle"
+    },
+    {
+      "id": 43,
+      "image_file": "000043.png",
+      "annotation_file": "000043.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 44,
+      "image_file": "000044.png",
+      "annotation_file": "000044.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 45,
+      "image_file": "000045.png",
+      "annotation_file": "000045.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 46,
+      "image_file": "000046.png",
+      "annotation_file": "000046.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 47,
+      "image_file": "000047.png",
+      "annotation_file": "000047.json",
+      "text": "Go to the Blue Triangle"
+    },
+    {
+      "id": 48,
+      "image_file": "000048.png",
+      "annotation_file": "000048.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 49,
+      "image_file": "000049.png",
+      "annotation_file": "000049.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 50,
+      "image_file": "000050.png",
+      "annotation_file": "000050.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 51,
+      "image_file": "000051.png",
+      "annotation_file": "000051.json",
+      "text": "Go to the Blue Triangle"
+    },
+    {
+      "id": 52,
+      "image_file": "000052.png",
+      "annotation_file": "000052.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 53,
+      "image_file": "000053.png",
+      "annotation_file": "000053.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 54,
+      "image_file": "000054.png",
+      "annotation_file": "000054.json",
+      "text": "Go to the Blue Triangle"
+    },
+    {
+      "id": 55,
+      "image_file": "000055.png",
+      "annotation_file": "000055.json",
+      "text": "Go to the Blue Triangle"
+    },
+    {
+      "id": 56,
+      "image_file": "000056.png",
+      "annotation_file": "000056.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 57,
+      "image_file": "000057.png",
+      "annotation_file": "000057.json",
+      "text": "Go to the Blue Triangle"
+    },
+    {
+      "id": 58,
+      "image_file": "000058.png",
+      "annotation_file": "000058.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 59,
+      "image_file": "000059.png",
+      "annotation_file": "000059.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 60,
+      "image_file": "000060.png",
+      "annotation_file": "000060.json",
+      "text": "Go to the Blue Triangle"
+    },
+    {
+      "id": 61,
+      "image_file": "000061.png",
+      "annotation_file": "000061.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 62,
+      "image_file": "000062.png",
+      "annotation_file": "000062.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 63,
+      "image_file": "000063.png",
+      "annotation_file": "000063.json",
+      "text": "Go to the Blue Triangle"
+    },
+    {
+      "id": 64,
+      "image_file": "000064.png",
+      "annotation_file": "000064.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 65,
+      "image_file": "000065.png",
+      "annotation_file": "000065.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 66,
+      "image_file": "000066.png",
+      "annotation_file": "000066.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 67,
+      "image_file": "000067.png",
+      "annotation_file": "000067.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 68,
+      "image_file": "000068.png",
+      "annotation_file": "000068.json",
+      "text": "Go to the Blue Triangle"
+    },
+    {
+      "id": 69,
+      "image_file": "000069.png",
+      "annotation_file": "000069.json",
+      "text": "Go to the Blue Triangle"
+    },
+    {
+      "id": 70,
+      "image_file": "000070.png",
+      "annotation_file": "000070.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 71,
+      "image_file": "000071.png",
+      "annotation_file": "000071.json",
+      "text": "Go to the Blue Triangle"
+    },
+    {
+      "id": 72,
+      "image_file": "000072.png",
+      "annotation_file": "000072.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 73,
+      "image_file": "000073.png",
+      "annotation_file": "000073.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 74,
+      "image_file": "000074.png",
+      "annotation_file": "000074.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 75,
+      "image_file": "000075.png",
+      "annotation_file": "000075.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 76,
+      "image_file": "000076.png",
+      "annotation_file": "000076.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 77,
+      "image_file": "000077.png",
+      "annotation_file": "000077.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 78,
+      "image_file": "000078.png",
+      "annotation_file": "000078.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 79,
+      "image_file": "000079.png",
+      "annotation_file": "000079.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 80,
+      "image_file": "000080.png",
+      "annotation_file": "000080.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 81,
+      "image_file": "000081.png",
+      "annotation_file": "000081.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 82,
+      "image_file": "000082.png",
+      "annotation_file": "000082.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 83,
+      "image_file": "000083.png",
+      "annotation_file": "000083.json",
+      "text": "Go to the Blue Triangle"
+    },
+    {
+      "id": 84,
+      "image_file": "000084.png",
+      "annotation_file": "000084.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 85,
+      "image_file": "000085.png",
+      "annotation_file": "000085.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 86,
+      "image_file": "000086.png",
+      "annotation_file": "000086.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 87,
+      "image_file": "000087.png",
+      "annotation_file": "000087.json",
+      "text": "Go to the Blue Triangle"
+    },
+    {
+      "id": 88,
+      "image_file": "000088.png",
+      "annotation_file": "000088.json",
+      "text": "Go to the Blue Triangle"
+    },
+    {
+      "id": 89,
+      "image_file": "000089.png",
+      "annotation_file": "000089.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 90,
+      "image_file": "000090.png",
+      "annotation_file": "000090.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 91,
+      "image_file": "000091.png",
+      "annotation_file": "000091.json",
+      "text": "Go to the Blue Triangle"
+    },
+    {
+      "id": 92,
+      "image_file": "000092.png",
+      "annotation_file": "000092.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 93,
+      "image_file": "000093.png",
+      "annotation_file": "000093.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 94,
+      "image_file": "000094.png",
+      "annotation_file": "000094.json",
+      "text": "Go to the Blue Triangle"
+    },
+    {
+      "id": 95,
+      "image_file": "000095.png",
+      "annotation_file": "000095.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 96,
+      "image_file": "000096.png",
+      "annotation_file": "000096.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 97,
+      "image_file": "000097.png",
+      "annotation_file": "000097.json",
+      "text": "Go to the Green Square"
+    },
+    {
+      "id": 98,
+      "image_file": "000098.png",
+      "annotation_file": "000098.json",
+      "text": "Go to the Red Circle"
+    },
+    {
+      "id": 99,
+      "image_file": "000099.png",
+      "annotation_file": "000099.json",
+      "text": "Go to the Green Square"
+    }
+  ]
+}

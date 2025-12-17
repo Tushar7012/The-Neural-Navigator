@@ -1,0 +1,9 @@
+{
+  "id": 29,
+  "image_file": "000029.png",
+  "text": "Go to the Red Circle",
+  "target": {
+    "shape": "Circle",
+    "color": "Red"
+  }
+}

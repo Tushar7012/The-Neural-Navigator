@@ -1,0 +1,9 @@
+{
+  "id": 17,
+  "image_file": "000017.png",
+  "text": "Go to the Blue Triangle",
+  "target": {
+    "shape": "Triangle",
+    "color": "Blue"
+  }
+}

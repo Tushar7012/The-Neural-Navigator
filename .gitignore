@@ -1,0 +1,23 @@
+# Internal files - DO NOT share with candidates
+.internal/
+data/.internal/
+test_data/.internal/
+
+# Generator script - internal use only
+generate_dataset.py
+
+# Python/uv environment
+.venv/
+__pycache__/
+*.pyc
+pyproject.toml
+uv.lock
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
