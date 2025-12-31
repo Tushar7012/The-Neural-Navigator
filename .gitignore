@@ -21,3 +21,10 @@ uv.lock
 # OS
 .DS_Store
 Thumbs.db
+
+# Model checkpoints (too large for git)
+outputs/*.pth
+*.pth
+
+# Prediction outputs (can be regenerated)
+predictions_train/
