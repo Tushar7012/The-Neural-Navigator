@@ -23,17 +23,17 @@ const simulatePrediction = (command) => {
     'Go to the Blue Triangle': { x: 30, y: 100 },
     'Go to the Green Square': { x: 100, y: 90 },
   }
-  
+
   const target = targets[command] || { x: 100, y: 100 }
   const path = []
-  
+
   for (let i = 0; i < 10; i++) {
     const t = i / 9
     const x = baseX + (target.x - baseX) * t + (Math.random() - 0.5) * 5
     const y = baseY + (target.y - baseY) * t + (Math.random() - 0.5) * 5
     path.push({ x, y })
   }
-  
+
   return path
 }
 
@@ -86,20 +86,20 @@ function App() {
 
   const handlePredict = useCallback(async () => {
     if (!imagePreview || !command) return
-    
+
     setIsLoading(true)
-    
+
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 1500))
-    
+
     const predictedPath = simulatePrediction(command)
-    
+
     setResult({
       path: predictedPath,
       confidence: (0.85 + Math.random() * 0.1).toFixed(2),
       inferenceTime: (50 + Math.random() * 100).toFixed(0),
     })
-    
+
     setIsLoading(false)
   }, [imagePreview, command])
 
@@ -109,18 +109,18 @@ function App() {
     canvas.width = 128
     canvas.height = 128
     const ctx = canvas.getContext('2d')
-    
+
     // White background
     ctx.fillStyle = '#ffffff'
     ctx.fillRect(0, 0, 128, 128)
-    
+
     // Draw shapes
     // Red circle
     ctx.fillStyle = '#ef4444'
     ctx.beginPath()
     ctx.arc(95, 45, 15, 0, Math.PI * 2)
     ctx.fill()
-    
+
     // Blue triangle
     ctx.fillStyle = '#3b82f6'
     ctx.beginPath()
@@ -129,11 +129,11 @@ function App() {
     ctx.lineTo(45, 115)
     ctx.closePath()
     ctx.fill()
-    
+
     // Green square
     ctx.fillStyle = '#22c55e'
     ctx.fillRect(85, 75, 30, 30)
-    
+
     setImagePreview(canvas.toDataURL())
     setCommand(sample.command)
     setSelectedCommand(COMMANDS.find(c => c.text === sample.command))
@@ -146,7 +146,7 @@ function App() {
       <header className="header">
         <div className="header-content">
           <div className="logo">
-            <div className="logo-icon">🧭</div>
+            <div className="logo-icon">NN</div>
             <span className="logo-text">Neural Navigator</span>
           </div>
           <nav className="nav-links">
@@ -168,19 +168,15 @@ function App() {
         </p>
         <div className="hero-badges animate-fade-in" style={{ animationDelay: '0.2s' }}>
           <span className="badge">
-            <span className="badge-icon">🔥</span>
             PyTorch
           </span>
           <span className="badge">
-            <span className="badge-icon">🧠</span>
             Multi-Modal
           </span>
           <span className="badge">
-            <span className="badge-icon">⚡</span>
             10.5M Parameters
           </span>
           <span className="badge">
-            <span className="badge-icon">📊</span>
             0.0109 MSE
           </span>
         </div>
@@ -192,7 +188,7 @@ function App() {
           {/* Input Panel */}
           <div className="card animate-fade-in">
             <div className="card-header">
-              <div className="card-icon">📤</div>
+              <div className="card-icon">IN</div>
               <h2 className="card-title">Input</h2>
             </div>
 
@@ -210,9 +206,9 @@ function App() {
                   <img src={imagePreview} alt="Preview" className="preview-image" />
                 ) : (
                   <>
-                    <div className="upload-icon">🖼️</div>
+                    <div className="upload-icon">+</div>
                     <p className="upload-text">Drop your map image here or click to browse</p>
-                    <p className="upload-hint">Supports PNG, JPG (128×128 recommended)</p>
+                    <p className="upload-hint">Supports PNG, JPG (128x128 recommended)</p>
                   </>
                 )}
                 <input
@@ -270,7 +266,7 @@ function App() {
                 </>
               ) : (
                 <>
-                  🚀 Predict Path
+                  Predict Path
                 </>
               )}
             </button>
@@ -280,7 +276,7 @@ function App() {
           <div className="result-card animate-fade-in" style={{ animationDelay: '0.1s' }}>
             <div className="result-header">
               <span className="result-title">
-                📍 Predicted Path
+                Predicted Path
               </span>
               {result && (
                 <span className="result-status">Success</span>
@@ -291,7 +287,7 @@ function App() {
                 {imagePreview && (
                   <img src={imagePreview} alt="Map" className="result-image" />
                 )}
-                
+
                 {/* Path Overlay */}
                 {result && (
                   <div className="path-overlay">
@@ -301,7 +297,7 @@ function App() {
                         className="path-line"
                         d={`M ${result.path.map(p => `${p.x},${p.y}`).join(' L ')}`}
                       />
-                      
+
                       {/* Path points */}
                       {result.path.map((point, i) => (
                         <circle
@@ -315,14 +311,14 @@ function App() {
                     </svg>
                   </div>
                 )}
-                
+
                 {isLoading && (
                   <div className="loading-overlay">
                     <div className="spinner"></div>
                     <p className="loading-text">Running inference...</p>
                   </div>
                 )}
-                
+
                 {!imagePreview && !isLoading && (
                   <div className="loading-overlay" style={{ background: 'var(--bg-dark)' }}>
                     <p className="loading-text">Upload an image to see predictions</p>
@@ -361,17 +357,19 @@ function App() {
                 className="sample-card"
                 onClick={() => loadSampleImage(sample)}
               >
-                <div 
-                  className="sample-image" 
-                  style={{ 
+                <div
+                  className="sample-image"
+                  style={{
                     background: 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    fontSize: '3rem'
+                    fontSize: '1.5rem',
+                    fontWeight: 'bold',
+                    color: '#64748b'
                   }}
                 >
-                  🗺️
+                  MAP
                 </div>
                 <div className="sample-info">
                   {sample.command}
@@ -385,7 +383,7 @@ function App() {
       {/* Footer */}
       <footer className="footer">
         <p>
-          Built with ❤️ using PyTorch & React | 
+          Built with PyTorch & React |
           <a href="https://github.com/Tushar7012/The-Neural-Navigator" target="_blank" rel="noopener noreferrer"> View on GitHub</a>
         </p>
       </footer>

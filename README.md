@@ -1,10 +1,10 @@
-# 🧭 The Neural Navigator
+# The Neural Navigator
 
 A multi-modal deep learning model that acts as a "Smart GPS" - taking 2D map images and text commands to predict navigation paths.
 
 ![Training Loss](outputs/training_loss.png)
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Architecture](#architecture)
@@ -15,7 +15,7 @@ A multi-modal deep learning model that acts as a "Smart GPS" - taking 2D map ima
 
 ---
 
-## 🎯 Overview
+## Overview
 
 The Neural Navigator is a multi-modal neural network that:
 - **Input**: Takes a 128x128 RGB map image + text command (e.g., "Go to the Red Circle")
@@ -28,42 +28,42 @@ The Neural Navigator is a multi-modal neural network that:
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 The model uses a **multi-modal fusion architecture** combining visual and textual information:
 
 ```
-┌─────────────────┐     ┌─────────────────┐
-│   Map Image     │     │  Text Command   │
-│  (128x128 RGB)  │     │ "Go to the..."  │
-└────────┬────────┘     └────────┬────────┘
-         │                       │
-         ▼                       ▼
-┌─────────────────┐     ┌─────────────────┐
-│  Vision Encoder │     │   Text Encoder  │
-│   (4-layer CNN) │     │ (Embed + LSTM)  │
-│    → 256 dim    │     │    → 256 dim    │
-└────────┬────────┘     └────────┬────────┘
-         │                       │
-         └───────────┬───────────┘
-                     ▼
-            ┌─────────────────┐
-            │  Feature Fusion │
-            │   (512 dim)     │
-            └────────┬────────┘
-                     │
-                     ▼
-            ┌─────────────────┐
-            │  Path Decoder   │
-            │  (Transformer)  │
-            │   2 layers      │
-            └────────┬────────┘
-                     │
-                     ▼
-            ┌─────────────────┐
-            │  Output Path    │
-            │  10 × (x, y)    │
-            └─────────────────┘
++------------------+     +------------------+
+|    Map Image     |     |   Text Command   |
+|   (128x128 RGB)  |     |  "Go to the..."  |
++--------+---------+     +--------+---------+
+         |                        |
+         v                        v
++------------------+     +------------------+
+|  Vision Encoder  |     |   Text Encoder   |
+|   (4-layer CNN)  |     |  (Embed + LSTM)  |
+|    -> 256 dim    |     |    -> 256 dim    |
++--------+---------+     +--------+---------+
+         |                        |
+         +------------+-----------+
+                      v
+             +------------------+
+             |  Feature Fusion  |
+             |    (512 dim)     |
+             +--------+---------+
+                      |
+                      v
+             +------------------+
+             |   Path Decoder   |
+             |   (Transformer)  |
+             |    2 layers      |
+             +--------+---------+
+                      |
+                      v
+             +------------------+
+             |   Output Path    |
+             |   10 x (x, y)    |
+             +------------------+
 ```
 
 ### Model Components
@@ -73,13 +73,13 @@ The model uses a **multi-modal fusion architecture** combining visual and textua
 | **Vision Encoder** | 4-layer CNN with BatchNorm, ReLU, AdaptivePool | 256 |
 | **Text Encoder** | Embedding (64-dim) + Bidirectional LSTM (128 hidden) | 256 |
 | **Fusion Layer** | Linear + ReLU + LayerNorm | 512 |
-| **Path Decoder** | Transformer Decoder (2 layers, 4 heads) + MLP | 10 × 2 |
+| **Path Decoder** | Transformer Decoder (2 layers, 4 heads) + MLP | 10 x 2 |
 
 **Total Parameters**: ~10.5 million
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ### Prerequisites
 - Python 3.8+
@@ -101,7 +101,7 @@ pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
 
 ---
 
-## 💻 Usage
+## Usage
 
 ### Training
 
@@ -138,7 +138,7 @@ python predict.py --checkpoint outputs/best_model.pth --test-dir test_data --out
 
 ---
 
-## 📊 Results
+## Results
 
 ### Training Performance
 
@@ -170,7 +170,7 @@ The test dataset does not include ground truth paths, so direct path accuracy ca
 
 ---
 
-## 🔧 Challenges & Solutions
+## Challenges & Solutions
 
 ### 1. What was the hardest part of this assignment?
 
@@ -196,18 +196,18 @@ The final design uses concatenation followed by a linear projection with LayerNo
 UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 2
 ```
 
-The training script crashed when trying to print a Unicode arrow character (`→`) used for status messages.
+The training script crashed when trying to print a Unicode arrow character used for status messages.
 
 **Debugging Process:**
 
-1. **Identified the error location**: The stack trace pointed to line 237 in `train.py` where I used `→` in a print statement.
+1. **Identified the error location**: The stack trace pointed to line 237 in `train.py` where I used a special character in a print statement.
 
-2. **Root cause analysis**: Windows PowerShell uses cp1252 encoding by default, which doesn't support the Unicode arrow character.
+2. **Root cause analysis**: Windows PowerShell uses cp1252 encoding by default, which doesn't support certain Unicode characters.
 
 3. **Solution**: Replaced the Unicode arrow with ASCII-safe alternative:
    ```python
    # Before (causes error on Windows)
-   print(f"  → New best model saved!")
+   print(f"  -> New best model saved!")
    
    # After (works everywhere)
    print(f"  --> New best model saved!")
@@ -225,7 +225,7 @@ The training script crashed when trying to print a Unicode arrow character (`→
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 The-Neural-Navigator/
@@ -244,17 +244,21 @@ The-Neural-Navigator/
 ├── predictions/             # Inference outputs
 │   ├── prediction_*.png     # Visualization images
 │   └── prediction_grid.png  # Grid comparison
+├── frontend/                # React web application
+│   ├── src/                 # Source files
+│   └── index.html           # Entry point
 ├── data_loader.py           # Dataset and DataLoader
 ├── model.py                 # Neural network architecture
 ├── train.py                 # Training script
 ├── predict.py               # Inference script
+├── api.py                   # Flask API server
 ├── requirements.txt         # Python dependencies
 └── README.md                # This file
 ```
 
 ---
 
-## 🔬 Technical Details
+## Technical Details
 
 ### Loss Function
 - **MSE Loss** between predicted and ground truth normalized coordinates
@@ -273,14 +277,14 @@ The-Neural-Navigator/
 
 ---
 
-## 📝 License
+## License
 
 This project is created as part of the DS Ventures AI Developer Assignment.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Dataset provided by [AiSaurabhPatil/assignment_dataset](https://github.com/AiSaurabhPatil/assignment_dataset)
-- Built with PyTorch
+- Built with PyTorch and React
 
 ---
 
