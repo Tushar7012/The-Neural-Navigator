@@ -78,6 +78,22 @@ def preprocess_image(image_data):
     return image_tensor.unsqueeze(0)  # Add batch dimension
 
 
+@app.route('/', methods=['GET'])
+def index():
+    """Root endpoint - API information."""
+    return jsonify({
+        "name": "Neural Navigator API",
+        "version": "1.0.0",
+        "description": "Multi-modal path prediction API",
+        "endpoints": {
+            "/api/health": "Health check",
+            "/api/predict": "POST - Predict path from image and command",
+            "/api/commands": "GET - Available navigation commands",
+            "/api/model-info": "GET - Model architecture details"
+        }
+    })
+
+
 @app.route('/api/health', methods=['GET'])
 def health_check():
     """Health check endpoint."""
